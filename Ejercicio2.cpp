@@ -1,24 +1,58 @@
-#include "iostream"
+#include <iostream>
+#include <math.h>
 using namespace std;
-int main()
-{
-    float distancia;
-    int tiempo;
-    float velocidad;
 
-    cout<<"Ingrese el tiempo en segundos: "<<endl;
-    cin>>tiempo;
+int main(){
+    cout << "-- MENU DE AREAS --" << endl;
+    cout << "1. Circulo" << endl;
+    cout << "2. Cuadrado" << endl;
+    cout << "3. Rectangulo" << endl;
+    cout << "4. Triangulo" << endl;
+    cout << "Ingrese la opcion que prefiera: ";
+    int opcion;
+    cin >> opcion;
 
-    cout<<"Ingrese la velocidad en m/s: "<<endl;
-    cin>>velocidad;
+    float area = 0, radio, lado, base, altura;
 
-    distancia = velocidad * tiempo;
+    switch (opcion)
+    {
+        case 1:
+            cout << "Ingrese el radio del circulo: ";
+            cin >> radio;
 
-    cout<<"La distancia resultante es: "<<distancia<<endl;
+            area = M_PI*pow(radio, 2);
+            cout << "El area del circulo es: " << area << endl;
+            break;
+        case 2:
+            cout << "Ingrese el lado del cuadrado: ";
+            cin >> lado;
 
-    cout<<"La direccion de la memoria de la variable tiempo es: "<<&tiempo<<endl;
-    cout<<"La direccion de la memoria de la variable velocidad es: "<<&velocidad<<endl;
-    cout<<"La direccion de la memoria de la variable distancia es: "<<&distancia<<endl;
+            area = pow(lado, 2);
+            cout << "El area del cuadrado es: " << area << endl;
+            break;
+        case 3:
+            cout << "Ingrese la base del rectangulo: ";
+            cin >> base;
+            cout << "Ingrese la altura del rectangulo: ";
+            cin >> altura;
 
+            area = base * altura;
+
+            cout << "El area del rectangulo es: " << area << endl;
+            break;
+        case 4:
+            cout << "Ingrese la base del triangulo: ";
+            cin >> base;
+            cout << "Ingrese la altura del triangulo: ";
+            cin >> altura;
+
+            area = (base*altura)/2;
+
+            cout << "El area del triangulo es: " << area << endl;
+            break;
+        default:
+            cout << "Opcion no valida" << endl;
+            break;
+    }
     return 0;
-}
+} 
