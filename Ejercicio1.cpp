@@ -1,41 +1,41 @@
-#include "iostream"
+#include <iostream>
 using namespace std;
-int main()
-{
-    int numero1; // 1, 2, 3
-    int numero2;
-    int suma;
-    int resta;
-    int producto;
-    float division; //1.23, 1.03
 
-    int cociente;
-    int residuo;
+int main(){
+    cout << "-- MENU --" << endl;
+    cout << "1. Sumar 2 numeros" << endl;
+    cout << "2. Restar 2 numeros" << endl;
+    cout << "3. Multiplicar 2 numeros" << endl;
+    cout << "4. Dividir 2 numeros" << endl;
+    cout << "Ingrese la opcion que prefiera: ";
+    int opcion;
+    cin >> opcion;
 
-    cout<<"Ingrese el primer numero: ";
-    cin>>numero1;
-    cout<<"Ingrese el segundo numero: ";
-    cin>>numero2;
+    float numero1, numero2;
+    cout << "Ingrese el numero 1: ";
+    cin >> numero1;
+    cout << "Ingrese el numero 2: ";
+    cin >> numero2;
 
-    // Se calcula la suma de los dos numeros
-    suma = numero1 + numero2;
-    cout<<"La suma es: "<<suma<<endl;
-
-    resta = numero1 - numero2;
-    cout<<"La resta es: "<<resta<<endl;
-
-    producto = numero1 * numero2;
-    cout<<"El producto es: "<<producto<<endl;
-
-    division = numero1 / (float) numero2;
-    cout<<"La division es: "<<division<<endl;
-
-    cociente = numero1 / numero2;
-    cout<<"El cociente es: "<<cociente<<endl;
-
-    residuo = numero1 % numero2;
-    cout<<"El residuo es: "<<residuo<<endl;
+    switch (opcion) // int y char
+    {
+    case 1:
+        cout << "La suma es: " << numero1 + numero2 << endl;
+        break;
+    case 2:
+        cout << "La resta es: " << numero1 - numero2 << endl;
+        break;
+    case 3:
+        cout << "El producto es: " << numero1 * numero2 << endl;
+        break;
+    case 4:
+        if(numero2 == 0) cout << "No se puede dividir entre 0" << endl;
+        else cout << "La division es: " << numero1 / numero2 << endl;
+        break;
+    default:
+        cout << "Esa opcion no existe" << endl;
+        break;
+    }
 
     return 0;
-
 }
