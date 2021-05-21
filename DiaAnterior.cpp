@@ -66,7 +66,7 @@ int main(void)
                 if(dd == 31){ // 31/12/2020
                     ddAnt = dd - 1; // 31 - 1 ->30
                     mmAnt = mm; // 12
-                    aaAnt = aa; // 2020
+                    aaAnt = aa - 1 ; // 2020
                     cout<<"El dia anterior es: "<<ddAnt<<"/"<<mmAnt<<"/"<<aaAnt<<endl; // 30/12/2020
                 }
                 else
@@ -74,7 +74,7 @@ int main(void)
             break;                    
         case 2:
             if(aa % 400 == 0 || (aa % 4 == 0 && aa % 100 != 0))
-                if(dd >= 1 && dd <= 28){ // 28/2/2020
+            if(dd > 1 && dd <= 28){ // 28/2/2020
                     ddAnt = dd - 1; // 28 - 1 -> 27
                     mmAnt = mm; // 2
                     aaAnt = aa; // 2020
