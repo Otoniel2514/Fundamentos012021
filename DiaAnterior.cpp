@@ -109,7 +109,6 @@ int main(void)
         default:
             cout<<"Dato no valido para mes"<<endl;
     }
-
     cout<<endl;
     return 0;
 }
