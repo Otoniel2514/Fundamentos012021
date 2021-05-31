@@ -5,23 +5,24 @@
 using namespace std;
 int main()
 {
-    int sumapar=0,sumaimpar=0, LimiteX;
+    int sumapar=0,sumaimpar=0, LimiteA,LimiteB;
 
-    cout<<"Introduce el valor de a: "<<endl;
-    cin>>LimiteX;
-    cout<<"Introduce el valor de b: "<<endl;
-    cin>>LimiteX;
+    cout<<"Introduce el valor de A que es el limite inferior: "<<endl;
+    cin>>LimiteA;
+    cout<<"Introduce el valor de B que es el limite superior: "<<endl;
+    cin>>LimiteB;
     cout<<endl;
   
-    for(int i=1; i<=LimiteX; i++){
-    if(i%2 != 0)
+    for(int LimiteA =1; LimiteA<=LimiteB; LimiteA++)
     {
-        sumaimpar=sumaimpar+i;
+        if(LimiteA%2 != 0)
+    {
+        sumaimpar=sumaimpar+LimiteB;
     }else
-        sumapar=i+sumapar;
+        sumapar=LimiteA +sumapar;
     }
-    cout<<"La suma de los numeros impares en el intervalo indicado son: "<<sumaimpar<<endl;
     cout<<"La suma de los numeros pares en el intervalo indicado son: "<<sumapar<<endl;
+    cout<<"La suma de los numeros impares en el intervalo indicado son: "<<sumaimpar<<endl;
 
 return 0;
 }
