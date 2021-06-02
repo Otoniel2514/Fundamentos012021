@@ -1,5 +1,5 @@
-// Crear un programa que Dados dos enteros a y b, que son los límites de un intervalo, 
-//realice la suma de todos los números pares, la suma de todos los números impares y muestre ambos resultados.
+//Crear un programa que Dados dos enteros a y b, que son los límites de un intervalo, 
+//realice la suma de todos los números pares, la suma de todos los números impares y muestre ambos resultados
 
 #include "iostream"
 using namespace std;
@@ -13,7 +13,7 @@ int main()
     cin>>LimiteB;
     cout<<endl;
   
-    for(int LimiteA = LimiteA;LimiteA<=LimiteB;LimiteA++)
+    for(LimiteA = LimiteA;LimiteA<=LimiteB;LimiteA++)
     {
         if(LimiteA%2 != 0)
     {
