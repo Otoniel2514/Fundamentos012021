@@ -13,11 +13,11 @@ int main()
     cin>>LimiteB;
     cout<<endl;
   
-    for(int LimiteA =1;LimiteA<=LimiteB;LimiteA++)
+    for(int LimiteA = LimiteA;LimiteA<=LimiteB;LimiteA++)
     {
         if(LimiteA%2 != 0)
     {
-        sumaimpar=sumaimpar+LimiteB;
+        sumaimpar=sumaimpar+LimiteA;
     }else
         sumapar=LimiteA+sumapar;
     }
