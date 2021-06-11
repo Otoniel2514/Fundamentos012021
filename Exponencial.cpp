@@ -30,28 +30,3 @@ int main()
     cout<<"El valor de e elevado a la x es: "<<Exp<<endl;
     return 0;
 }
-
-
-
-
-
-
-
-
-
-/*while (i <= y)
-    {
-        z = 1;
-        fact = 1; 
-        while(z <= i) 
-        {
-            fact = fact * z;
-            z = z + 1;
-        }
-        Exp = Exp + pow(x,i)/fact; //Formula
-        i = i + 1;
-    }
-    cout<<endl;
-    cout<<"El valor de e elevado a la x es: "<<Exp<<endl;
-    return 0;
-}*/
