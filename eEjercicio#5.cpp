@@ -2,12 +2,13 @@
 #include "iostream"
 #include "math.h"
 using namespace std;
-float e(int,int);
+float e(float,int);
 int fact(int);
 int main()
 {
     int i = 0; // Comienza en cero ya que es una suma sucesiva de valores
-    int x,y; //Variables a utilizar en el programa
+    float x; //Variables a utilizar en el programa
+    int y; //Variable a utilizar en el programa
 
     cout<<"Introduzca el valor de x: "<<endl;
     cin>>x;
@@ -16,7 +17,7 @@ int main()
     cout<<"El valor de e elevado a la x es: "<<e(x,y)<<endl;
     return 0;
 }
-float e(int x, int y )
+float e(float x, int y )
 {
     float Exp = 0;
     for (int i = 0; i <= y; i++)
