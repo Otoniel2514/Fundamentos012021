@@ -1,3 +1,7 @@
+/*Resuelva ambos en un solo programa. Su programa 
+completo debe también incluir la función main para realizar las invocaciones necesarias a las 
+funciones que se le piden*/
+
 #include "iostream"
 #include "cstring"
 using namespace std;
