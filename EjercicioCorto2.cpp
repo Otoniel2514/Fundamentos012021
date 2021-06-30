@@ -1,65 +1,69 @@
 /*Resuelva ambos en un solo programa. Su programa 
 completo debe también incluir la función main para realizar las invocaciones necesarias a las 
 funciones que se le piden*/
-
 #include "iostream"
-#include "cstring"
+#include "string"
 using namespace std;
-void RetornarBoleano(bool[],bool[]);
-void jugarP(char[], char[]);
-void ingreselafrase(char[]);
+bool comprobarJuegoP(string cadena);
+string descomponerLenguajeDeLaP (string cadena);
 int main()
 {
-    char palabra[100];
-    char jugar[10];
-    cout<<"Ingrese una frase con la que desea jugar el juego de la 'P': "<<endl;
-    cin.getline(palabra, 100);
+    string frase;
+    cout << "\n======Juego de la palabra con P======"<<endl;
+    cout << "Digite una frase que este hablada con el lenguaje de la letra P: "<<endl;
+    getline(cin, frase);
 
-    cout<<"La frase original dada es: "<<palabra<<endl;
-    jugarP(palabra, jugar);
-    cout<<"La palabra convertida con el juego de la 'P' es: "<<jugar<<endl;
+        // Comprueba si la frase está o no en lenguaje P
+    if (!comprobarJuegoP(frase))
+        cout << "No ha ingresado una frase que es hablada con el lenguaje de la P.";
     
+    else {
+        cout << "La frase original es: ";
+        cout << descomponerLenguajeDeLaP(frase);
+    }
+
     return 0;
 }
-void RetornarBoleano(bool True, bool False)
-{
-    char palabra,P;
-    if(palabra = P)
-    {
-        cout<<"Su frase esta digitada correctamente"<<palabra<<endl;
-    }
-    else{
-        cout<<"Su frase esta digitada incorrectamente"<<palabra<<endl;
-    }
-}
-void jugarP(char arreglo[], char jugar[])
-{
-    int n = strlen(arreglo),z = 0;
-    for(int i = 0; i < n; i++){
-        switch(arreglo[i]){
-            case 'a':
-            case 'e':
-            case 'i':
-            case 'o':
-            case 'u':
-                jugar[z] = arreglo[i];
-                jugar[z+1] = 'P';
-                jugar[z+2] = arreglo[i];  
-                z += 3;            
-                break;
-            default: 
-                jugar[z] = arreglo[i];
-                z++;
-                break;
-        }
-}
-void ingreselafrase(char palabra, char correcta);
-{
-    char palabra,correcta;
-    {
-        if(palabra = correcta);
-        cout<<"La palabra ingresada es la correcta"<<palabra<<endl;
+// Desarrollamos las funciones declaradas en la cabezera del codigo
+bool comprobarJuegoP(string cadena){
+    bool flag = true;
+    for (int i = 0; i < cadena.length(); i++) {
+        switch (cadena[i]) {
+        case 'a':
+        case 'e':
+        case 'o':
+        case 'i':
+        case 'u':
+        
+            if (cadena[i+1] != 'p' || cadena[i+2] != cadena[i])
+                flag = false;
+            else
+                i+=2;
+            break;
         }
     }
-    system("Pause");
+    return flag;
 }
+
+string descomponerLenguajeDeLaP(string cadena) {
+    string cadena_descompuesta = "";
+    for (int i = 0; i < cadena.length(); i++) {
+        
+        switch (cadena[i]) {
+        case 'a':
+        case 'e':
+        case 'o':
+        case 'i': 
+        case 'u':
+           
+            cadena_descompuesta += cadena[i];
+            i+=2;
+            break;
+        default:
+            cadena_descompuesta += cadena[i];
+            break;
+        }
+    }
+    return cadena_descompuesta;
+}
+
