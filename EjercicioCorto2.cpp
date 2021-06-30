@@ -13,7 +13,7 @@ int main()
     cout << "Digite una frase que este hablada con el lenguaje de la letra P: "<<endl;
     getline(cin, frase);
 
-        // Comprueba si la frase está o no en lenguaje P
+        // Nos sirve para comprueba si la frase está o no escrita en lenguaje de la p
     if (!comprobarJuegoP(frase))
         cout << "No ha ingresado una frase que es hablada con el lenguaje de la P.";
     
