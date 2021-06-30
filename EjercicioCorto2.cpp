@@ -9,7 +9,7 @@ string descomponerLenguajeDeLaP (string cadena);
 int main()
 {
     string frase;
-    cout << "\n======Juego de la palabra con P======"<<endl;
+    cout << "\n======Juego de la palabra con P======\n"<<endl;
     cout << "Digite una frase que este hablada con el lenguaje de la letra P: "<<endl;
     getline(cin, frase);
 
