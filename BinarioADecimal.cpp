@@ -1,4 +1,4 @@
-//Programa que Convierta un número binario, a su número decimal equivalente, ingesado desde teclado.
+//Programa que convierta un número binario, a su número decimal equivalente, ingesado desde teclado.
 #include "iostream"
 using namespace std;
 
