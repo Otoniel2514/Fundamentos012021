@@ -6,7 +6,7 @@ void convertirBinarioADecimal(int, int[], int&);
 void imprimirDecimal(int[], int);
 int main()
 {
-    int binario, digitosDecimal;
+    int binario, digitosDecimal = 0;
     int decimal[100];
     cout<<"Ingrese el numero Binario que desea convertir a decimal: "<<endl;
     cin>>binario;
