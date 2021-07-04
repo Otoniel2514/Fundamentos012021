@@ -1,3 +1,4 @@
+//Programa que convierta un número binario, a su número decimal equivalente, ingesado desde teclado.
 #include <iostream>
 #include <cmath>
 using namespace std;
